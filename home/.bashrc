@@ -1,3 +1,5 @@
+autoload -U +X bashcompinit && bashcompinit
+
 # DIRECTORIES #
 homeDirs=(".local/bin" "etc")
 export DOTFILES="${HOME}/.dotfiles"
@@ -42,6 +44,11 @@ function ghana(){
 	echo "SSH key is anafvana"
 }
 
+# TERRAFORM #
+
+complete -C /usr/local/bin/terraform terraform
+complete -o nospace -C /usr/local/bin/terraform terraform
+
 # COMPRESS VIDEO #
 function compressVideo(){
     if [[ -z "$1" || ! -e "$1" ]]; then
@@ -63,6 +70,7 @@ alias pyfileinfo='/opt/homebrew/anaconda3/bin/pyfileinfo.py'
 alias pyOSinfo='/opt/homebrew/anaconda3/bin/pyOSinfo.py'
 alias pip-date='/opt/homebrew/anaconda3/bin/pip-date.py'
 alias pipbyday='/opt/homebrew/anaconda3/bin/pipbyday.py'
+alias tf='terraform'
 
 # AUTOMATIC CHANGES #
 # changes made automatically by packages/programs
@@ -70,3 +78,4 @@ alias pipbyday='/opt/homebrew/anaconda3/bin/pipbyday.py'
 
 # NO PATH DUPLICATES #
 cleanPath
+
