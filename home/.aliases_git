@@ -23,12 +23,20 @@ function gcmin(){
 	gcm "🤏 minor: $@"
 }
 
-function gcprp(){
-	gcm "🚧 preparation: $@"
+function gcdep(){
+	gcm "🔗 dep: $@"
+}
+
+function gcwip(){
+	gcm "🚧 wip: $@"
 }
 
 function gcpre(){
-	gcprp "$@"
+	gcwip "$@"
+}
+
+function gcpre(){
+	gcwip "$@"
 }
 
 function gcref(){
@@ -189,8 +197,10 @@ function ghelp(){
 		gcrmv	= ❌ remove
 		gcmrg	= 🔀 merge
 		gcmin	= 🤏 minor
-		gcpre	= 🚧 preparation
-		gcprp	= 🚧 preparation
+		gcwip	= 🚧 wip
+		gcpre	= 🚧 wip
+		gcprp	= 🚧 wip
+		gcdep	= 🔗 dep
 		gcfmt	= 💄 format
 		gctst	= ✅ test
 		gccln	= 🧹 cleanup
