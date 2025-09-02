@@ -71,6 +71,9 @@ alias pyOSinfo='/opt/homebrew/anaconda3/bin/pyOSinfo.py'
 alias pip-date='/opt/homebrew/anaconda3/bin/pip-date.py'
 alias pipbyday='/opt/homebrew/anaconda3/bin/pipbyday.py'
 alias tf='terraform'
+alias tfi='terraform init'
+alias tfp='terraform plan'
+alias tfa='terraform apply'
 
 # AUTOMATIC CHANGES #
 # changes made automatically by packages/programs
