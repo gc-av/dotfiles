@@ -183,12 +183,12 @@ function ghelp(){
 		gp	= git push
 		gpl	= git pull
 		gf	= git fetch
-		girb	= git rebase -i
+		gri	= git rebase -i
 		gl	= git log --decorate --graph
 		gco	= git checkout
 		gnb	= git checkout -b
-		grb	= git branch -d
-		grbf	= git branch -D (force delete)
+		gbd	= git branch -d
+		gbD	= git branch -D (force delete)
 		gcnew	= 📦 feat
 		gcftr	= 📦 feat
 		gcfix	= 🐛 fix
