@@ -24,10 +24,14 @@ function gcmin(){
 }
 
 function gcprp(){
-	gcm "🚧 PREPARATION: $@"
+	gcm "🚧 WIP: $@"
 }
 
 function gcpre(){
+	gcprp "$@"
+}
+
+function gcprp(){
 	gcprp "$@"
 }
 
@@ -175,12 +179,12 @@ function ghelp(){
 		gp	= git push
 		gpl	= git pull
 		gf	= git fetch
-		girb	= git rebase -i
+		gri	= git rebase -i
 		gl	= git log --decorate --graph
 		gco	= git checkout
 		gnb	= git checkout -b
-		grb	= git branch -d
-		grbf	= git branch -D (force delete)
+		gbd	= git branch -d
+		gbD	= git branch -D (force delete)
 		gcnew	= 📦 NEW
 		gcupg	= 🆙 UPGRADE
 		gcimp	= 👌 IMPROVE
@@ -223,11 +227,11 @@ alias gcane='git commit --amend --no-edit'
 alias gp='git push'
 alias gpl='git pull'
 alias gf='git fetch'
-alias girb='git rebase -i'
+alias gri='git rebase -i'
 alias gl='git log --decorate --graph'
 alias gco='git checkout'
 alias gnb='git checkout -b'
-alias grb='git branch -d'
-alias grbf='git branch -D'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
 alias gchelp='ghelp'
 alias gcreminder='greminder'
