@@ -60,6 +60,10 @@ function compressVideo(){
 	ffmpeg -i "$1" -vcodec libx265 -vf "scale=1080:-1" -crf 28 "$videoTitle".mp4
 }
 
+# DOCKER / COLIMA #
+export DOCKER_HOST=unix://$HOME/.colima/default/docker.sock
+
+
 # OTHER ALIASES #
 alias psql='psql -h localhost -d postgres -U postgres -W'
 alias sme='ssh -AX -p 7226 88.87.45.118'
