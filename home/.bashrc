@@ -22,26 +22,26 @@ if [ -f "$MAC_BASH" ]; then
 fi
 
 # GOOGLE CLOUD #
-if [ -f '/Users/ana/etc/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ana/etc/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/ana/etc/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ana/etc/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/a/etc/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/a/etc/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/a/etc/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/a/etc/google-cloud-sdk/completion.zsh.inc'; fi
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
 # GITHUB IDENTITY SWITCHING #
 ssh="$HOME/.ssh"
 main_ssh="id_rsa"
-anafvana="anafvana@github"
-anacdc="ana-cdc"
+alexprv="gc-av@github"
+alexcdc="alex-cdc"
 
 function ghcdc(){
-	cp "$ssh/$anacdc" "$ssh/$main_ssh"
-	cp "$ssh/$anacdc.pub" "$ssh/$main_ssh.pub"
-	echo "SSH key is ana-cdc"
+	cp "$ssh/$alexcdc" "$ssh/$main_ssh"
+	cp "$ssh/$alexcdc.pub" "$ssh/$main_ssh.pub"
+	echo "SSH key is alex-cdc"
 }
 
-function ghana(){
-	cp "$ssh/$anafvana" "$ssh/$main_ssh"
-	cp "$ssh/$anafvana.pub" "$ssh/$main_ssh.pub"
-	echo "SSH key is anafvana"
+function ghprv(){
+	cp "$ssh/$alexprv" "$ssh/$main_ssh"
+	cp "$ssh/$alexprv.pub" "$ssh/$main_ssh.pub"
+	echo "SSH key is gc-av"
 }
 
 # TERRAFORM #
@@ -62,7 +62,6 @@ function compressVideo(){
 
 # DOCKER / COLIMA #
 export DOCKER_HOST=unix://$HOME/.colima/default/docker.sock
-
 
 # OTHER ALIASES #
 alias psql='psql -h localhost -d postgres -U postgres -W'
