@@ -24,8 +24,11 @@ yabaiRestart () {
 	yabai --restart-service
 }
 
+export PATH="/opt/homebrew/opt/python/bin:$PATH"
+
 addToPath '/opt/homebrew/bin'
 addToPath '/opt/homebrew/opt/arm-none-eabi-gcc@8/bin'
+addToPath '/opt/homebrew/opt/python/bin'
 addToPath '/opt/homebrew/anaconda3/bin'
 addToPath '/opt/homebrew/opt/node@18/bin'
 addToPath '/usr/local/go/bin'
